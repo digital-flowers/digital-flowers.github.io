@@ -1,0 +1,84 @@
+{
+  "app": {
+    "id": "digital-flowers",
+    "contextName": "/",
+    "port": 8000,
+    "view engine": "ejs",
+    "logger": "dev",
+    "public": "public",
+    "favicon": "images/icons/fav.png",
+    "requestLimit": "200MB",
+    "views": "views"
+  },
+  "webpack": {
+    "hotReload": true,
+    "optimize": false,
+    "splitVendor": true,
+    "extractCSS": true,
+    "inputDir": "client",
+    "outputDir": "public",
+    "entries": {
+      "index": "index.js"
+    },
+    "polyfills": [
+      "babel-polyfill",
+      "dom-shims",
+      "console-polyfill",
+      "event-source-polyfill",
+      "classlist-polyfill",
+      "custom-event-polyfill"
+    ],
+    "copy": [
+      "images",
+      "fonts",
+      "videos"
+    ],
+    "ignore": [
+      "electron"
+    ],
+    "babel": {
+      "cacheDirectory": true,
+      "presets": [
+        "es2015",
+        "stage-0",
+        "react"
+      ],
+      "plugins": [
+        "transform-decorators-legacy",
+        "transform-react-constant-elements",
+        "transform-react-inline-elements",
+        "transform-flow-strip-types",
+        "transform-remove-strict-mode"
+      ]
+    },
+    "alias": {
+      "/client": "/"
+    }
+  },
+  "errors": {
+    "default": "Ops! Something Went Wrong.",
+    "404": "Page Not Found!",
+    "authentication": "Unauthorized!"
+  },
+  "i18n": {
+    "defaultLocale": "en",
+    "directory": "i18n",
+    "queryParameter": "lang",
+    "autoReload": true,
+    "syncFiles": true,
+    "updateFiles": true,
+    "locales": [
+      {
+        "code": "en",
+        "name": "English",
+        "available": true
+      },
+      {
+        "code": "ko",
+        "name": "한국어",
+        "available": true
+      }
+    ]
+  }
+}
+

@@ -1,0 +1,14 @@
+{
+  "app": {
+    "contextName": "/",
+    "port": 80
+  },
+  "webpack": {
+    "hotReload": false,
+    "optimize": true
+  },
+  "i18n": {
+    "syncFiles": false,
+    "updateFiles": false
+  }
+}

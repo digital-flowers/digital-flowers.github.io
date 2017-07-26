@@ -1,0 +1,42 @@
+{
+  "mixpanel": {
+    "logger": true,
+    "token": "",
+    "userFields": {
+    }
+  },
+  "errors": {
+    "default": "Ops! Something Went Wrong."
+  },
+  "resources": {
+    "images": "/public/images",
+    "icons": "/public/images/icons",
+    "videos": "/public/videos",
+    "fonts": "/public/fonts"
+  },
+  "middleware": {
+    "logger": true
+  },
+  "moment": {
+    "dayFormat": {
+      "lastDay": "[Yesterday]",
+      "sameDay": "[Today]",
+      "nextDay": "[Tomorrow]",
+      "lastWeek": "[last] dddd",
+      "nextWeek": "dddd",
+      "sameElse": "L"
+    }
+  },
+  "upload": {
+    "profilePhoto": {
+      "size": 10000000,
+      "width": 340,
+      "height": 340,
+      "extensions": [
+        "png",
+        "jpg",
+        "jpeg"
+      ]
+    }
+  }
+}

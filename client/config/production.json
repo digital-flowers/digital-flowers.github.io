@@ -1,0 +1,8 @@
+{
+  "mixpanel": {
+    "logger": false
+  },
+  "middleware": {
+    "logger": false
+  }
+}

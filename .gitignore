@@ -1,2 +1,92 @@
-# Created by .ignore support plugin (hsz.mobi)
-.idea/
+## Sublime
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+sftp-config.json
+
+## Rethinkdb
+rethinkdb_data
+
+## Node / Npm
+node_modules
+.node_repl_history
+.npm
+npm-debug.*
+*.log
+*.log.*
+
+## Runtime Data
+pids
+*.pid
+*.seed
+
+## Instrumented libs
+lib-cov
+
+## Coverage directory
+coverage
+
+# Grunt storage
+.grunt
+
+## Node-waf configuration
+.lock-wscript
+
+## compiled binary
+build/Release
+
+## dependency directories
+jspm_packages
+
+## Mac OS X Files
+.DS_Store
+
+## Vim swap files
+*.swp
+
+## Temporal i18n files
+build/messages
+src/i18n/data_merged.json
+
+## Xcode
+build
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+*.moved-aside
+DerivedData
+*.ipa
+*.xccheckout
+*.hmap
+xcuserdata
+*.xcuserstate
+project.xcworkspace
+
+## Android / IntelliJ / Webstorm
+.idea
+.gradle
+local.properties
+*.iml
+
+## Yarn
+yarn-error.log
+
+## Buck
+buck-out
+\.buckd
+*.keystore
+
+## Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+
+## public folders
+public*
