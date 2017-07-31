@@ -68,9 +68,48 @@
 @import 'layout/footer';
 @import 'layout/wrapper';
 
+label {
+  display: inline-block;
+  margin: 0 15px;
+  line-height: 50px;
+  text-transform: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+select {
+  text-transform: none;
+  letter-spacing: initial;
+}
+
 .hljs {
   text-align: left;
   padding-left: 20px;
-  font-size: 14px;
+  font-size: 17px;
   text-transform: none;
+  letter-spacing: initial;
+  font-family: inherit;
+  border: 1px solid #ccc;
+}
+
+.select-wrapper {
+  width: 250px;
+  display: inline-block;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.field {
+  display: block;
+  overflow: hidden;
+  margin-bottom: 10px;
+  text-align: left;
 }

@@ -1,10 +1,10 @@
 import React, {Component} from "react";
 import {Provider} from "react-redux";
+import PropTypes from "prop-types";
 import {ConnectedRouter} from "react-router-redux";
 import {ThemeProvider} from "styled-components/src";
 import {Route} from "./components/custom";
 import Routes from "./components/routes";
-import PropTypes from "prop-types";
 
 // app component
 export class App extends Component {

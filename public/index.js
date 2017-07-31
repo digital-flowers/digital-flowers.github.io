@@ -18,6 +18,10 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRedux = __webpack_require__(84);
 
+var _propTypes = __webpack_require__(9);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _reactRouterRedux = __webpack_require__(85);
 
 var _src = __webpack_require__(859);
@@ -27,10 +31,6 @@ var _custom = __webpack_require__(171);
 var _routes = __webpack_require__(274);
 
 var _routes2 = _interopRequireDefault(_routes);
-
-var _propTypes = __webpack_require__(9);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1130,6 +1130,8 @@ var _main = __webpack_require__(798);
 
 var _main2 = _interopRequireDefault(_main);
 
+var _reactAnimatedCss = __webpack_require__(885);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1138,20 +1140,139 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var animations = ["bounce", "flash", "pulse", "rubberBand", "shake", "headShake", "swing", "tada", "wobble", "jello", "bounceIn", "bounceInDown", "bounceInLeft", "bounceInRight", "bounceInUp", "bounceOut", "bounceOutDown", "bounceOutLeft", "bounceOutRight", "bounceOutUp", "fadeIn", "fadeInDown", "fadeInDownBig", "fadeInLeft", "fadeInLeftBig", "fadeInRight", "fadeInRightBig", "fadeInUp", "fadeInUpBig", "fadeOut", "fadeOutDown", "fadeOutDownBig", "fadeOutLeft", "fadeOutLeftBig", "fadeOutRight", "fadeOutRightBig", "fadeOutUp", "fadeOutUpBig", "flipInX", "flipInY", "flipOutX", "flipOutY", "lightSpeedIn", "lightSpeedOut", "rotateIn", "rotateInDownLeft", "rotateInDownRight", "rotateInUpLeft", "rotateInUpRight", "rotateOut", "rotateOutDownLeft", "rotateOutDownRight", "rotateOutUpLeft", "rotateOutUpRight", "hinge", "jackInTheBox", "rollIn", "rollOut", "zoomIn", "zoomInDown", "zoomInLeft", "zoomInRight", "zoomInUp", "zoomOut", "zoomOutDown", "zoomOutLeft", "zoomOutRight", "zoomOutUp", "slideInDown", "slideInLeft", "slideInRight", "slideInUp", "slideOutDown", "slideOutLeft", "slideOutRight", "slideOutUp"];
+
+var _ref = _jsx("header", {}, void 0, _jsx("h1", {}, void 0, "react-animated-css"));
+
+var _ref2 = _jsx("div", {
+  className: "col s5"
+}, void 0, _jsx("label", {
+  htmlFor: "animation-in"
+}, void 0, "Animation In"));
+
+var _ref3 = _jsx("div", {
+  className: "col s5"
+}, void 0, _jsx("label", {
+  htmlFor: "animation-out"
+}, void 0, "Animation Out"));
+
+var _ref4 = _jsx("div", {
+  className: "col s5"
+}, void 0, _jsx("label", {
+  htmlFor: "is-visible"
+}, void 0, "Is Visible"));
+
+var _ref5 = _jsx("span", {
+  className: "lever"
+});
+
+var _ref6 = _jsx("img", {
+  src: "/public/images/demo.jpg"
+});
+
 var _default = (_dec = (0, _reactRedux.connect)(), _dec(_class = function (_React$Component) {
   _inherits(_default, _React$Component);
 
-  function _default() {
+  function _default(props) {
     _classCallCheck(this, _default);
 
-    return _possibleConstructorReturn(this, (_default.__proto__ || Object.getPrototypeOf(_default)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (_default.__proto__ || Object.getPrototypeOf(_default)).call(this, props));
+
+    _this.state = {
+      animationIn: "lightSpeedIn",
+      animationOut: "zoomOutDown",
+      isVisible: true
+    };
+    return _this;
   }
 
   _createClass(_default, [{
     key: "render",
     value: function render() {
-      var code = "\n      import {Animated} from \"react-animated-css\";\n      <Animated animationIn=\"bounceInLeft\" animationOut=\"fadeOut\" isVisible={true}>\n          <div>\n              hello world ;)\n          </div>\n      </Animated>  \n    ";
-      return _jsx("div", {}, void 0, _jsx("div", {}, void 0, _jsx(_main2.default, {
+      var _this2 = this;
+
+      var _state = this.state,
+          animationIn = _state.animationIn,
+          animationOut = _state.animationOut,
+          isVisible = _state.isVisible;
+
+      var code = "import {Animated} from \"react-animated-css\";\n<Animated animationIn=\"" + animationIn + "\" animationOut=\"" + animationOut + "\" isVisible={" + isVisible + "}>\n    <img src=\"/public/images/demo.jpg\"/>\n</Animated>";
+      return _jsx("div", {}, void 0, _ref, _jsx("div", {
+        className: "row"
+      }, void 0, _jsx("div", {
+        className: "col m6"
+      }, void 0, _jsx("div", {
+        className: "field"
+      }, void 0, _jsx("div", {
+        className: "row"
+      }, void 0, _ref2, _jsx("div", {
+        className: "col s7"
+      }, void 0, _jsx("div", {
+        className: "select-wrapper"
+      }, void 0, _jsx("select", {
+        name: "animation-in",
+        id: "animation-in",
+        value: animationIn,
+        onChange: function onChange(evt) {
+          _this2.setState({ animationIn: evt.target.value });
+          _this2.setState({ isVisible: false });
+          setTimeout(function () {
+            return _this2.setState({ isVisible: true });
+          }, 500);
+        }
+      }, void 0, animations.filter(function (animation) {
+        return !/out/gi.test(animation);
+      }).map(function (animation) {
+        return _jsx("option", {
+          value: animation
+        }, void 0, animation);
+      })))))), _jsx("div", {
+        className: "field"
+      }, void 0, _jsx("div", {
+        className: "row"
+      }, void 0, _ref3, _jsx("div", {
+        className: "col s7"
+      }, void 0, _jsx("div", {
+        className: "select-wrapper"
+      }, void 0, _jsx("select", {
+        name: "animation-out",
+        id: "animation-out",
+        value: animationOut,
+        onChange: function onChange(evt) {
+          _this2.setState({ animationOut: evt.target.value });
+          _this2.setState({ isVisible: true });
+          setTimeout(function () {
+            return _this2.setState({ isVisible: false });
+          }, 500);
+        }
+      }, void 0, animations.filter(function (animation) {
+        return !/in/gi.test(animation);
+      }).map(function (animation) {
+        return _jsx("option", {
+          value: animation
+        }, void 0, animation);
+      })))))), _jsx("div", {
+        className: "field"
+      }, void 0, _jsx("div", {
+        className: "row"
+      }, void 0, _ref4, _jsx("div", {
+        className: "col s7"
+      }, void 0, _jsx("div", {
+        className: "switch"
+      }, void 0, _jsx("label", {}, void 0, "Off", _jsx("input", {
+        type: "checkbox",
+        name: "is-visible",
+        checked: isVisible,
+        onChange: function onChange(evt) {
+          return _this2.setState({ isVisible: !isVisible });
+        }
+      }), _ref5, "On")))))), _jsx("div", {
+        className: "col s6"
+      }, void 0, _jsx(_reactAnimatedCss.Animated, {
+        animationIn: animationIn,
+        animationOut: animationOut,
+        isVisible: isVisible
+      }, void 0, _ref6))), _jsx("div", {}, void 0, _jsx(_main2.default, {
         language: "javascript"
       }, void 0, code)));
     }
@@ -2196,4 +2317,4 @@ module.exports = __webpack_require__(262);
 /***/ })
 
 },[884]);
-//# sourceMappingURL=index.js.map?f27f6b86ae6a72cfcb25
+//# sourceMappingURL=index.js.map?d66bcb0f500bdcc52380
