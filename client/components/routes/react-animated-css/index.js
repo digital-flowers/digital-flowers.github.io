@@ -103,7 +103,7 @@ export default class extends React.Component {
 </Animated>`;
     return (
       <div>
-        <header>
+        <header className="inner">
           <h1>react-animated-css</h1>
         </header>
         <div className="row">
