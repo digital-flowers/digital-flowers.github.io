@@ -32,17 +32,16 @@ const render = App => {
 
 // render the app
 $(() => {
-  // render app
-  render(App);
-  // enable hot reload ;)
-  module.hot && module.hot.accept('./app', () => render(require('./app').App));
-
   // others
   if ('addEventListener' in window) {
-    window.addEventListener('load', function () {
+    window.addEventListener('load', () => {
       document.body.className = document.body.className.replace(/\bis-loading\b/, '');
     });
     document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
   }
+  // render app
+  render(App);
+  // enable hot reload ;)
+  module.hot && module.hot.accept('./app', () => render(require('./app').App));
 });
 

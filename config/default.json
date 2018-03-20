@@ -48,7 +48,8 @@
         "transform-react-constant-elements",
         "transform-react-inline-elements",
         "transform-flow-strip-types",
-        "transform-remove-strict-mode"
+        "transform-remove-strict-mode",
+        "flow-react-proptypes"
       ]
     },
     "alias": {

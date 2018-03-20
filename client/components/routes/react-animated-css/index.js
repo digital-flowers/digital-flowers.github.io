@@ -82,6 +82,10 @@ const animations = [
   "slideOutUp"
 ];
 
+const inAnimations = animations.filter(animation => !(/out/gi).test(animation));
+
+const outAnimations = animations.filter(animation => !(/in/gi).test(animation));
+
 @connect()
 export default class extends React.Component {
 
@@ -123,13 +127,11 @@ export default class extends React.Component {
                               this.setState({isVisible: false});
                               setTimeout(() => this.setState({isVisible: true}), 500);
                             }}>
-                      {animations
-                        .filter(animation => !(/out/gi).test(animation))
-                        .map(animation => (
-                          <option value={animation}>
-                            {animation}
-                          </option>
-                        ))}
+                      {inAnimations.map(animation => (
+                        <option value={animation}>
+                          {animation}
+                        </option>
+                      ))}
                     </select>
                   </div>
                 </div>
@@ -150,13 +152,11 @@ export default class extends React.Component {
                               this.setState({isVisible: true});
                               setTimeout(() => this.setState({isVisible: false}), 500);
                             }}>
-                      {animations
-                        .filter(animation => !(/in/gi).test(animation))
-                        .map(animation => (
-                          <option value={animation}>
-                            {animation}
-                          </option>
-                        ))}
+                      {outAnimations.map(animation => (
+                        <option value={animation}>
+                          {animation}
+                        </option>
+                      ))}
                     </select>
                   </div>
                 </div>

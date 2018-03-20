@@ -1,6 +1,7 @@
 import React from "react";
 import {connect} from "react-redux";
 import ReactAnimatedCSS from "./react-animated-css";
+import ReactAnimatedCSSOnScroll from "./react-animated-css-onscroll";
 import {HashScroll, Route, Switch} from "../custom";
 
 @connect()
@@ -14,12 +15,13 @@ export default class extends React.Component {
             <section id="main">
               <Switch>
                 <Route path={"/react-animated-css.html"} component={ReactAnimatedCSS}/>
+                <Route path={"/react-animated-css-onscroll.html"} component={ReactAnimatedCSSOnScroll}/>
                 <Route exact>
                   <div>
                     <header>
                       <span className="avatar"><img src="/public/images/avatar.png" alt=""/></span>
                       <h1>Fareed Alnamrouti</h1>
-                      <p>Full Stack Developer</p>
+                      <p>Full Stack Software Engineer</p>
                     </header>
                     <hr/>
                     <div>
@@ -27,6 +29,7 @@ export default class extends React.Component {
                     </div>
                     <ul className="actions">
                       <li><a href="/react-animated-css.html" className="button">React Animated CSS</a></li>
+                      <li><a href="/react-animated-css-onscroll.html" className="button">React Animated CSS On Scroll</a></li>
                     </ul>
                     <hr/>
                     <footer>
