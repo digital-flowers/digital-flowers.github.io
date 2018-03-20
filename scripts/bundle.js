@@ -8,4 +8,4 @@ const {checkVersions} = require('../lib/system');
 module.exports = checkVersions()
   .then(clearWebpackOutputDir)
   .then(bundleWebpackClient)
-  .then(() => buildHTML(["index", "react-animated-css"]));
+  .then(() => buildHTML(["index", "react-animated-css", "react-animated-css-onscroll"]));
