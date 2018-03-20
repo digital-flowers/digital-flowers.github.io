@@ -99,7 +99,7 @@ export default class extends React.Component {
           <h1>react-animated-css-onscroll</h1>
         </header>
         {randomAnimations.map(animationIn => (
-            <div className="row" style={{padding: "100px 0"}}>
+            <div className="row" style={{paddingBottom: "500px"}}>
               <div className="col m6">
                 <Highlight language="javascript">
                   {`import {AnimatedOnScroll} from "react-animated-css-onscroll";

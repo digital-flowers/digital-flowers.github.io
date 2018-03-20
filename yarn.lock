@@ -6267,8 +6267,8 @@ rc@^1.1.7:
     strip-json-comments "~2.0.1"
 
 react-animated-css-onscroll@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/react-animated-css-onscroll/-/react-animated-css-onscroll-1.0.0.tgz#dcdc86d4343b71964574a21acbad33af23ea699e"
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-animated-css-onscroll/-/react-animated-css-onscroll-1.0.1.tgz#fa6fab1730dd976c855cc8522c4ad137c96745aa"
   dependencies:
     autobind-decorator "^2.1.0"
     babel-polyfill "^6.23.0"

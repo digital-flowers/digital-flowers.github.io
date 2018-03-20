@@ -21,14 +21,6 @@
 		cursor: default;
 		opacity: 0.95;
 		text-align: center;
-
-		@include vendor('transform-origin', '50% 50%');
-		@include vendor('transform', 'rotateX(0deg)');
-		@include vendor('transition', (
-			'opacity #{_duration(main)} ease',
-			'transform #{_duration(main)} ease'
-		));
-
 		.avatar {
 			position: relative;
 			display: block;
