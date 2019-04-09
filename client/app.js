@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {Provider} from "react-redux";
 import PropTypes from "prop-types";
 import {ConnectedRouter} from "react-router-redux";
-import {ThemeProvider} from "styled-components/src";
+import {ThemeProvider} from "styled-components";
 import {Route} from "./components/custom";
 import Routes from "./components/routes";
 

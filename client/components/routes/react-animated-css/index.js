@@ -95,14 +95,15 @@ export default class extends React.Component {
     this.state = {
       animationIn: "lightSpeedIn",
       animationOut: "zoomOutDown",
+      duration: 1000,
       isVisible: true
     }
   }
 
   render() {
-    const {animationIn, animationOut, isVisible} = this.state;
+    const {animationIn, animationOut, duration, isVisible} = this.state;
     const code = `import {Animated} from "react-animated-css";
-<Animated animationIn="${animationIn}" animationOut="${animationOut}" isVisible={${isVisible}}>
+<Animated animationIn="${animationIn}" animationOut="${animationOut}" animationInDuration={${duration}} animationOutDuration={${duration}} isVisible={${isVisible}}>
     <img src="/public/images/demo.jpg"/>
 </Animated>`;
     return (
@@ -122,11 +123,7 @@ export default class extends React.Component {
                     <select name="animation-in"
                             id="animation-in"
                             value={animationIn}
-                            onChange={evt => {
-                              this.setState({animationIn: evt.target.value});
-                              this.setState({isVisible: false});
-                              setTimeout(() => this.setState({isVisible: true}), 500);
-                            }}>
+                            onChange={evt => this.setState({isVisible: true, animationIn: evt.target.value})}>
                       {inAnimations.map(animation => (
                         <option value={animation}>
                           {animation}
@@ -147,14 +144,31 @@ export default class extends React.Component {
                     <select name="animation-out"
                             id="animation-out"
                             value={animationOut}
-                            onChange={evt => {
-                              this.setState({animationOut: evt.target.value});
-                              this.setState({isVisible: true});
-                              setTimeout(() => this.setState({isVisible: false}), 500);
-                            }}>
+                            onChange={evt => this.setState({isVisible: false, animationOut: evt.target.value})}>
                       {outAnimations.map(animation => (
                         <option value={animation}>
                           {animation}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="field">
+              <div className="row">
+                <div className="col s5">
+                  <label htmlFor="animation-out">Duration</label>
+                </div>
+                <div className="col s7">
+                  <div className="select-wrapper">
+                    <select name="animation-out"
+                            id="animation-out"
+                            value={duration}
+                            onChange={evt => this.setState({duration: evt.target.value})}>
+                      {[400, 800, 1000, 1400, 1800, 2000, 3000].map(time => (
+                        <option value={time}>
+                          {time}
                         </option>
                       ))}
                     </select>
@@ -174,7 +188,7 @@ export default class extends React.Component {
                       <input type="checkbox"
                              name="is-visible"
                              checked={isVisible}
-                             onChange={evt => this.setState({isVisible: !isVisible})}/>
+                             onChange={() => this.setState({isVisible: !isVisible})}/>
                       <span className="lever"/>
                       On
                     </label>
@@ -184,7 +198,10 @@ export default class extends React.Component {
             </div>
           </div>
           <div className="col s6">
-            <Animated animationIn={animationIn} animationOut={animationOut} isVisible={isVisible}>
+            <Animated animationIn={animationIn} animationOut={animationOut}
+                      animationInDuration={duration}
+                      animationOutDuration={duration}
+                      isVisible={isVisible}>
               <img src="/public/images/demo.jpg"/>
             </Animated>
           </div>
