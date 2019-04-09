@@ -103,13 +103,13 @@ export default class extends React.Component {
               <div className="col m6">
                 <Highlight language="javascript">
                   {`import {AnimatedOnScroll} from "react-animated-css-onscroll";
-<AnimatedOnScroll animationIn="${animationIn}">
+<AnimatedOnScroll animationIn="${animationIn}" animationInDuration={600}>
     <img src="/public/images/demo.jpg"/>
 </AnimatedOnScroll>`}
                 </Highlight>
               </div>
               <div className="col m6">
-                <AnimatedOnScroll animationIn={animationIn}>
+                <AnimatedOnScroll animationIn={animationIn} animationInDuration={600}>
                   <img src="/public/images/demo.jpg"/>
                 </AnimatedOnScroll>
               </div>

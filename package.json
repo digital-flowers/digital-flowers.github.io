@@ -107,7 +107,7 @@
     "proxy-middleware": "^0.15.0",
     "react": "^16.8.6",
     "react-animated-css": "https://github.com/digital-flowers/react-animated-css",
-    "react-animated-css-onscroll": "^1.0.0",
+    "react-animated-css-onscroll": "https://github.com/digital-flowers/react-animated-css-onscroll.git",
     "react-dom": "^16.8.6",
     "react-highlight.js": "^1.0.5",
     "react-native": "0.42.3",

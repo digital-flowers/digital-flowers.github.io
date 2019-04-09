@@ -430,11 +430,6 @@ autobind-decorator@^1.4.0:
   resolved "https://registry.yarnpkg.com/autobind-decorator/-/autobind-decorator-1.4.3.tgz#4c96ffa77b10622ede24f110f5dbbf56691417d1"
   integrity sha1-TJb/p3sQYi7eJPEQ9du/VmkUF9E=
 
-autobind-decorator@^2.1.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/autobind-decorator/-/autobind-decorator-2.4.0.tgz#ea9e1c98708cf3b5b356f7cf9f10f265ff18239c"
-  integrity sha512-OGYhWUO72V6DafbF8PM8rm3EPbfuyMZcJhtm5/n26IDwO18pohE4eNazLoCGhPiXOCD0gEGmrbU3849QvM8bbw==
-
 autoprefixer@^6.3.1, autoprefixer@^6.7.7:
   version "6.7.7"
   resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-6.7.7.tgz#1dbd1c835658e35ce3f9984099db00585c782014"
@@ -7401,31 +7396,18 @@ rc@^1.1.7, rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-animated-css-onscroll@^1.0.0:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/react-animated-css-onscroll/-/react-animated-css-onscroll-1.0.2.tgz#8ae4436cde0d86d14a178058a4b86a4ffb53052f"
-  integrity sha1-iuRDbN4NhtFKF4BYpLhqT/tTBS8=
+"react-animated-css-onscroll@https://github.com/digital-flowers/react-animated-css-onscroll.git":
+  version "1.0.5"
+  resolved "https://github.com/digital-flowers/react-animated-css-onscroll.git#04420353d348cea81b4a2632e3a662af3a97ba22"
   dependencies:
-    autobind-decorator "^2.1.0"
     babel-polyfill "^6.23.0"
     browser-or-node "^1.0.2"
     lodash.throttle "^4.1.1"
     prop-types "^15.5.10"
     react "^15.6.1"
-    react-animated-css "^1.0.4"
+    react-animated-css "^1.0.5"
 
-react-animated-css@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/react-animated-css/-/react-animated-css-1.0.4.tgz#72ee6f15de725ee40da779f8fd6225ff6a71c713"
-  integrity sha1-cu5vFd5yXuQNp3n4/WIl/2pxxxM=
-  dependencies:
-    babel-polyfill "^6.23.0"
-    browser-or-node "^1.0.2"
-    classnames "^2.2.5"
-    prop-types "^15.5.10"
-    react "^15.6.1"
-
-"react-animated-css@https://github.com/digital-flowers/react-animated-css":
+react-animated-css@^1.0.5, "react-animated-css@https://github.com/digital-flowers/react-animated-css":
   version "1.0.5"
   resolved "https://github.com/digital-flowers/react-animated-css#d12bd2a32a9bee2e38729dede66f1646294d53b2"
   dependencies:
